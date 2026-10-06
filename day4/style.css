@@ -1,0 +1,120 @@
+/* Light theme colours */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --card-color: #f4f4f4;
+  --border-color: #cccccc;
+  --button-bg: #222222;
+  --button-text: #ffffff;
+  --warning-color: orange;
+  --over-color: red;
+}
+
+
+/* Dark theme changes only the CSS variables */
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #f5f5f5;
+  --card-color: #2b2b2b;
+  --border-color: #555555;
+  --button-bg: #f5f5f5;
+  --button-text: #222222;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 40px 20px;
+
+  /* These automatically change when body.dark is added */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  font-family: Arial, sans-serif;
+}
+
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 24px;
+
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+
+
+h1 {
+  margin-top: 0;
+}
+
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+
+textarea {
+  width: 100%;
+  padding: 12px;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+
+  font: inherit;
+  resize: vertical;
+}
+
+
+p {
+  margin: 8px 0;
+}
+
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+
+button {
+  padding: 10px 16px;
+
+  background-color: var(--button-bg);
+  color: var(--button-text);
+
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+button:hover {
+  opacity: 0.85;
+}
+
+
+/* JavaScript adds this when characters go above 180 */
+.warning {
+  color: var(--warning-color);
+}
+
+
+/* JavaScript adds this when characters go above 200 */
+.over {
+  color: var(--over-color);
+  font-weight: bold;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>QuickNotes - Day 4</title>
+
+  <!-- Connects the HTML page to the CSS file -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Loads JavaScript after the HTML has been parsed -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main>
+
+    <h1>QuickNotes</h1>
+
+    <!-- Label for the note textarea -->
+    <label for="note-text">Write your note:</label>
+
+    <!-- Textarea where the user writes the note -->
+    <textarea
+      id="note-text"
+      rows="10"
+      placeholder="Start writing..."
+    ></textarea>
+
+    <!-- JavaScript updates this with the character count -->
+    <p id="char-count">0 / 200 characters</p>
+
+    <!-- JavaScript updates this with the word count -->
+    <p id="word-count">0 words</p>
+
+    <div class="buttons">
+
+      <!-- this code here will lear the note and removes the saved draft -->
+      <button id="clear-btn" type="button">Clear</button>
+
+      <!-- Switches between light and dark themes -->
+      <button id="theme-toggle" type="button">Dark mode</button>
+
+    </div>
+  </main>
+</body>
+</html>
