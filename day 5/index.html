@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Day 5 - User Directory</title>
+
+  <!-- Loads JavaScript after the HTML has been parsed -->
+  <script src="users.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>User Directory</h1>
+    <p>Load and search users from a server.</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="directory-heading">
+      <h2 id="directory-heading">Directory</h2>
+
+      <!-- JavaScript uses this button to fetch users -->
+      <button id="load-users" type="button">Load Users</button>
+
+      <!-- The label makes the search input accessible -->
+      <label for="filter-input">Filter users by name:</label>
+      <input
+        id="filter-input"
+        type="text"
+        placeholder="Enter a name..."
+      />
+
+      <!-- JavaScript displays loading, success, and error messages here -->
+      <p id="status" role="status" aria-live="polite">
+        Click Load Users to begin.
+      </p>
+
+      <!-- JavaScript creates user entries inside this list -->
+      <ul id="users-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Day 5 Assignment - Web Development</p>
+  </footer>
+</body>
+</html>
